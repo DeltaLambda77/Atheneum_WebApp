@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Atheneum.API.props" />
+</Project>
