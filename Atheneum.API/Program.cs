@@ -1,3 +1,4 @@
+using Atheneum.API.Configurations;
 using Atheneum.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("AtheneumAppDbConnection");
 builder.Services.AddDbContext<AtheneumDbContext>(options => options.UseSqlServer(connectionString));
 
+builder.Services.AddAutoMapper(typeof(MapperConfig));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
