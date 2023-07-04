@@ -10,11 +10,13 @@ using Atheneum.API.Models.Author;
 using AutoMapper;
 using Microsoft.OpenApi.Validations;
 using Atheneum.API.Static;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Atheneum.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class AuthorsController : ControllerBase
     {
         private readonly AtheneumDbContext _context;
@@ -25,6 +27,7 @@ namespace Atheneum.API.Controllers
         {
             _context = context;
             this.mapper = mapper;
+            this.logger = logger;
         }
 
         // GET: api/Authors
@@ -72,6 +75,7 @@ namespace Atheneum.API.Controllers
         // PUT: api/Authors/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> PutAuthor(int id, AuthorUpdateDto authorDto)
         {
             if (id != authorDto.Id)
@@ -114,6 +118,8 @@ namespace Atheneum.API.Controllers
         // POST: api/Authors
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Roles = "Administrator")]
+
         public async Task<ActionResult<AuthorCreateDto>> PostAuthor(AuthorCreateDto authorDto)
         {
             try
@@ -133,6 +139,8 @@ namespace Atheneum.API.Controllers
 
         // DELETE: api/Authors/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrator")]
+
         public async Task<IActionResult> DeleteAuthor(int id)
         {
             try

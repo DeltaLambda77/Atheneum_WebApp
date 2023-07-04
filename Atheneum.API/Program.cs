@@ -1,13 +1,21 @@
 using Atheneum.API.Configurations;
 using Atheneum.API.Data;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("AtheneumAppDbConnection");
 builder.Services.AddDbContext<AtheneumDbContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddIdentityCore<APIUser>()
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<AtheneumDbContext>();
 
 builder.Services.AddAutoMapper(typeof(MapperConfig));
 
@@ -23,6 +31,24 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAll", b => b.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin());
 });
 
+builder.Services.AddAuthentication(options => {
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero,
+        ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+        ValidAudience = builder.Configuration["JwtSettings:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:Key"]))
+    };
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -36,6 +62,7 @@ app.UseHttpsRedirection();
 
 app.UseCors("AllowAll");
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

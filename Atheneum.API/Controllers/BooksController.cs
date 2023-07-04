@@ -9,11 +9,13 @@ using Atheneum.API.Data;
 using AutoMapper;
 using Atheneum.API.Models.Book;
 using AutoMapper.QueryableExtensions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Atheneum.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BooksController : ControllerBase
     {
         private readonly AtheneumDbContext _context;
@@ -57,6 +59,7 @@ namespace Atheneum.API.Controllers
         // PUT: api/Books/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> PutBook(int id, BookUpdateDto bookDto)
         {
             if (id != bookDto.Id)
@@ -96,6 +99,8 @@ namespace Atheneum.API.Controllers
         // POST: api/Books
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Roles = "Administrator")]
+
         public async Task<ActionResult<BookCreateDto>> PostBook(BookCreateDto bookDto)
         {
             var book = mapper.Map<Book>(bookDto);
@@ -107,6 +112,8 @@ namespace Atheneum.API.Controllers
 
         // DELETE: api/Books/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrator")]
+
         public async Task<IActionResult> DeleteBook(int id)
         {
             if (_context.Books == null)
