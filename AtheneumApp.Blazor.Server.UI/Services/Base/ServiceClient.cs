@@ -143,13 +143,11 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Client : IClient
     {
-        private string _baseUrl = "";
         private System.Net.Http.HttpClient _httpClient;
         private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
 
-        public Client(string baseUrl, System.Net.Http.HttpClient httpClient)
+        public Client(System.Net.Http.HttpClient httpClient)
         {
-            BaseUrl = baseUrl;
             _httpClient = httpClient;
             _settings = new System.Lazy<Newtonsoft.Json.JsonSerializerSettings>(CreateSerializerSettings);
         }
@@ -159,12 +157,6 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
             var settings = new Newtonsoft.Json.JsonSerializerSettings();
             UpdateJsonSerializerSettings(settings);
             return settings;
-        }
-
-        public string BaseUrl
-        {
-            get { return _baseUrl; }
-            set { _baseUrl = value; }
         }
 
         protected Newtonsoft.Json.JsonSerializerSettings JsonSerializerSettings { get { return _settings.Value; } }
@@ -188,7 +180,7 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
         public virtual async System.Threading.Tasks.Task RegisterAsync(UserDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Auth/register");
+            urlBuilder_.Append("api/Auth/register");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -260,7 +252,7 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
         public virtual async System.Threading.Tasks.Task<AuthResponse> LoginAsync(LoginUserDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Auth/login");
+            urlBuilder_.Append("api/Auth/login");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -338,7 +330,7 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
         public virtual async System.Threading.Tasks.Task<System.Collections.Generic.ICollection<AuthorReadDto>> AuthorsAllAsync(System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Authors");
+            urlBuilder_.Append("api/Authors");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -412,7 +404,7 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
         public virtual async System.Threading.Tasks.Task<AuthorCreateDto> AuthorsPOSTAsync(AuthorCreateDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Authors");
+            urlBuilder_.Append("api/Authors");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -493,7 +485,7 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Authors/{id}");
+            urlBuilder_.Append("api/Authors/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -571,7 +563,7 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Authors/{id}");
+            urlBuilder_.Append("api/Authors/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -647,7 +639,7 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Authors/{id}");
+            urlBuilder_.Append("api/Authors/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -716,7 +708,7 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
         public virtual async System.Threading.Tasks.Task<System.Collections.Generic.ICollection<BookReadDto>> BooksAllAsync(System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Books");
+            urlBuilder_.Append("api/Books");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -790,7 +782,7 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
         public virtual async System.Threading.Tasks.Task<BookCreateDto> BooksPOSTAsync(BookCreateDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Books");
+            urlBuilder_.Append("api/Books");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -871,7 +863,7 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Books/{id}");
+            urlBuilder_.Append("api/Books/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -949,7 +941,7 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Books/{id}");
+            urlBuilder_.Append("api/Books/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -1025,7 +1017,7 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Books/{id}");
+            urlBuilder_.Append("api/Books/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -1094,7 +1086,7 @@ namespace AtheneumApp.Blazor.Server.UI.Services.Base
         public virtual async System.Threading.Tasks.Task<System.Collections.Generic.ICollection<WeatherForecast>> GetWeatherForecastAsync(System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/WeatherForecast");
+            urlBuilder_.Append("WeatherForecast");
 
             var client_ = _httpClient;
             var disposeClient_ = false;

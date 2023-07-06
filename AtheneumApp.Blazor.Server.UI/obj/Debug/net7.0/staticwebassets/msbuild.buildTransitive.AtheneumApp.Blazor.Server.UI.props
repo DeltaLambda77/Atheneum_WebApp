@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\AtheneumApp.Blazor.Server.UI.props" />
+</Project>

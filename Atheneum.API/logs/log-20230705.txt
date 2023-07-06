@@ -1,0 +1,27 @@
+2023-07-05 21:52:15.117 -04:00 [INF] Now listening on: https://localhost:7146
+2023-07-05 21:52:15.166 -04:00 [INF] Now listening on: http://localhost:5216
+2023-07-05 21:52:15.169 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-05 21:52:15.170 -04:00 [INF] Hosting environment: Development
+2023-07-05 21:52:15.171 -04:00 [INF] Content root path: D:\Coding\C#\Blazor\Blazor_FS\Atheneum\Atheneum.API
+2023-07-05 21:52:44.304 -04:00 [INF] Login Attempt for admin@atheneum.com 
+2023-07-05 21:52:44.304 -04:00 [INF] Login Attempt for admin@atheneum.com 
+2023-07-05 21:52:48.216 -04:00 [INF] Login Attempt for admin@atheneum.com 
+2023-07-05 21:52:48.820 -04:00 [INF] Login Attempt for admin@atheneum.com 
+2023-07-05 21:52:48.961 -04:00 [INF] Login Attempt for admin@atheneum.com 
+2023-07-05 21:52:55.160 -04:00 [INF] Login Attempt for admin@atheneum.com 
+2023-07-05 21:52:59.423 -04:00 [INF] Login Attempt for admin@bookstore.com 
+2023-07-05 22:11:41.655 -04:00 [INF] Now listening on: https://localhost:7146
+2023-07-05 22:11:41.702 -04:00 [INF] Now listening on: http://localhost:5216
+2023-07-05 22:11:41.705 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-05 22:11:41.706 -04:00 [INF] Hosting environment: Development
+2023-07-05 22:11:41.711 -04:00 [INF] Content root path: D:\Coding\C#\Blazor\Blazor_FS\Atheneum\Atheneum.API
+2023-07-05 22:12:31.121 -04:00 [INF] Now listening on: https://localhost:7146
+2023-07-05 22:12:31.175 -04:00 [INF] Now listening on: http://localhost:5216
+2023-07-05 22:12:31.178 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-05 22:12:31.179 -04:00 [INF] Hosting environment: Development
+2023-07-05 22:12:31.184 -04:00 [INF] Content root path: D:\Coding\C#\Blazor\Blazor_FS\Atheneum\Atheneum.API
+2023-07-05 22:14:53.959 -04:00 [INF] Now listening on: https://localhost:7146
+2023-07-05 22:14:54.009 -04:00 [INF] Now listening on: http://localhost:5216
+2023-07-05 22:14:54.033 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-05 22:14:54.035 -04:00 [INF] Hosting environment: Development
+2023-07-05 22:14:54.036 -04:00 [INF] Content root path: D:\Coding\C#\Blazor\Blazor_FS\Atheneum\Atheneum.API
