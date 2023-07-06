@@ -58,7 +58,7 @@ namespace AtheneumApp.Blazor.Server.UI.Providers
 
         private async Task<List<Claim>> GetClaims()
         {
-            var savedToken = await localStorage.GetItemAsync<string>("authToken");
+            var savedToken = await localStorage.GetItemAsync<string>("accessToken");
             var tokenContent = jwtSecurityTokenHandler.ReadJwtToken(savedToken);
             var claims = tokenContent.Claims.ToList();
             claims.Add(new Claim(ClaimTypes.Name, tokenContent.Subject));
