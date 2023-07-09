@@ -13,6 +13,7 @@ namespace Atheneum.API.Configurations
             CreateMap<AuthorCreateDto, Author>().ReverseMap();
             CreateMap<AuthorReadDto, Author>().ReverseMap();
             CreateMap<AuthorUpdateDto, Author>().ReverseMap();
+            CreateMap<AuthorDetailsDto, Author>().ReverseMap();
 
             CreateMap<BookCreateDto, Book>().ReverseMap();
             CreateMap<BookUpdateDto, Book>().ReverseMap();

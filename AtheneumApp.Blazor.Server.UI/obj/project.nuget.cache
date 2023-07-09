@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cx18vGhwIRn9DYb/UiVrhVAscm4M5HleUKF2h1rENqU9W8bR9OQghrH5UuxbVvEecFRGVW1x5QdLcG/ukYq1sA==",
+  "dgSpecHash": "PtbjRxubZ2VUDKtA8nsf21GI+PJA7/WlZcgUr6CG0v5Gofe+oKiOByzVtp/TqhbDVscB1Vph7WmfYJmWyFgCTw==",
   "success": true,
   "projectFilePath": "D:\\Coding\\C#\\Blazor\\Blazor_FS\\Atheneum\\AtheneumApp.Blazor.Server.UI\\AtheneumApp.Blazor.Server.UI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\danlo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\danlo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\danlo\\.nuget\\packages\\blazored.localstorage\\4.3.0\\blazored.localstorage.4.3.0.nupkg.sha512",
     "C:\\Users\\danlo\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.0\\microsoft.aspnetcore.authorization.7.0.0.nupkg.sha512",
     "C:\\Users\\danlo\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.0\\microsoft.aspnetcore.components.7.0.0.nupkg.sha512",

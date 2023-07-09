@@ -11,6 +11,7 @@ using AutoMapper;
 using Microsoft.OpenApi.Validations;
 using Atheneum.API.Static;
 using Microsoft.AspNetCore.Authorization;
+using AutoMapper.QueryableExtensions;
 
 namespace Atheneum.API.Controllers
 {
@@ -49,11 +50,14 @@ namespace Atheneum.API.Controllers
 
         // GET: api/Authors/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<AuthorReadDto>> GetAuthor(int id)
+        public async Task<ActionResult<AuthorDetailsDto>> GetAuthor(int id)
         {
             try
             {
-                var author = await _context.Authors.FindAsync(id);
+                var author = await _context.Authors
+                    .Include(q => q.Books)
+                    .ProjectTo<AuthorDetailsDto>(mapper.ConfigurationProvider)
+                    .FirstOrDefaultAsync(q => q.Id == id);
 
                 if (author == null)
                 {
@@ -61,9 +65,7 @@ namespace Atheneum.API.Controllers
                     return NotFound();
                 }
 
-                var authorDto = mapper.Map<AuthorReadDto>(author);
-
-                return Ok(authorDto);
+                return Ok(author);
             }
             catch (Exception ex)
             {
