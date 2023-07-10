@@ -7,7 +7,9 @@ namespace AtheneumApp.Blazor.Server.UI.Configurations
     {
         public MapperConfig()
         {
-            CreateMap<AuthorReadDto, AuthorUpdateDto>().ReverseMap();
+            CreateMap<AuthorDetailsDto, AuthorUpdateDto>().ReverseMap();
+            CreateMap<BookDetailsDto, BookUpdateDto>().ReverseMap();
+
         }
     }
 }

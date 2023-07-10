@@ -1,0 +1,40 @@
+2023-07-09 11:34:17.677 -04:00 [INF] Now listening on: https://localhost:7146
+2023-07-09 11:34:17.744 -04:00 [INF] Now listening on: http://localhost:5216
+2023-07-09 11:34:17.752 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-09 11:34:17.753 -04:00 [INF] Hosting environment: Development
+2023-07-09 11:34:17.753 -04:00 [INF] Content root path: D:\Coding\C#\Blazor\Blazor_FS\Atheneum\Atheneum.API
+2023-07-09 12:43:36.010 -04:00 [INF] Now listening on: https://localhost:7146
+2023-07-09 12:43:36.065 -04:00 [INF] Now listening on: http://localhost:5216
+2023-07-09 12:43:36.067 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-09 12:43:36.068 -04:00 [INF] Hosting environment: Development
+2023-07-09 12:43:36.069 -04:00 [INF] Content root path: D:\Coding\C#\Blazor\Blazor_FS\Atheneum\Atheneum.API
+2023-07-09 13:17:51.011 -04:00 [INF] Now listening on: https://localhost:7146
+2023-07-09 13:17:51.137 -04:00 [INF] Now listening on: http://localhost:5216
+2023-07-09 13:17:51.146 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-09 13:17:51.147 -04:00 [INF] Hosting environment: Development
+2023-07-09 13:17:51.147 -04:00 [INF] Content root path: D:\Coding\C#\Blazor\Blazor_FS\Atheneum\Atheneum.API
+2023-07-09 15:32:37.081 -04:00 [INF] Now listening on: https://localhost:7146
+2023-07-09 15:32:37.144 -04:00 [INF] Now listening on: http://localhost:5216
+2023-07-09 15:32:37.147 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-09 15:32:37.148 -04:00 [INF] Hosting environment: Development
+2023-07-09 15:32:37.149 -04:00 [INF] Content root path: D:\Coding\C#\Blazor\Blazor_FS\Atheneum\Atheneum.API
+2023-07-09 15:39:41.610 -04:00 [INF] Now listening on: https://localhost:7146
+2023-07-09 15:39:41.647 -04:00 [INF] Now listening on: http://localhost:5216
+2023-07-09 15:39:41.655 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-09 15:39:41.656 -04:00 [INF] Hosting environment: Development
+2023-07-09 15:39:41.657 -04:00 [INF] Content root path: D:\Coding\C#\Blazor\Blazor_FS\Atheneum\Atheneum.API
+2023-07-09 19:35:21.297 -04:00 [INF] Now listening on: https://localhost:7146
+2023-07-09 19:35:21.412 -04:00 [INF] Now listening on: http://localhost:5216
+2023-07-09 19:35:21.427 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-09 19:35:21.428 -04:00 [INF] Hosting environment: Development
+2023-07-09 19:35:21.429 -04:00 [INF] Content root path: D:\Coding\C#\Blazor\Blazor_FS\Atheneum\Atheneum.API
+2023-07-09 19:37:09.537 -04:00 [INF] Now listening on: https://localhost:7146
+2023-07-09 19:37:09.580 -04:00 [INF] Now listening on: http://localhost:5216
+2023-07-09 19:37:09.584 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-09 19:37:09.585 -04:00 [INF] Hosting environment: Development
+2023-07-09 19:37:09.585 -04:00 [INF] Content root path: D:\Coding\C#\Blazor\Blazor_FS\Atheneum\Atheneum.API
+2023-07-09 19:49:25.421 -04:00 [INF] Now listening on: https://localhost:7146
+2023-07-09 19:49:26.277 -04:00 [INF] Now listening on: http://localhost:5216
+2023-07-09 19:49:26.280 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-09 19:49:26.280 -04:00 [INF] Hosting environment: Development
+2023-07-09 19:49:26.281 -04:00 [INF] Content root path: D:\Coding\C#\Blazor\Blazor_FS\Atheneum\Atheneum.API

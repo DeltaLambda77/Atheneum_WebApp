@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "pwBPoMDVndjR08wj/Q2E8cbPztb9Rkkzm1jHE77HMmc=",
+  "Hash": "mO/k7XCSD+4GzhQOUsWE36TYHTOfx7Xx8hKRHv1aMuY=",
   "Source": "Atheneum.API",
   "BasePath": "_content/Atheneum.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Atheneum.API\\wwwroot",
+      "Source": "Atheneum.API",
+      "ContentRoot": "D:\\Coding\\C#\\Blazor\\Blazor_FS\\Atheneum\\Atheneum.API\\wwwroot\\",
+      "BasePath": "_content/Atheneum.API",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
